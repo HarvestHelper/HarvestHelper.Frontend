@@ -11,4 +11,6 @@ window.EQUIPMENT_SERVICE_URL = 'https://localhost:5001'
 window.EQUIPMENT_ITEMS_API_URL = `${window.EQUIPMENT_SERVICE_URL}/equipment`
 window.EQUIPMENTINVENTORY_SERVICE_URL = 'https://localhost:5005'
 window.EQUIPMENTINVENTORY_ITEMS_API_URL = `${window.EQUIPMENTINVENTORY_SERVICE_URL}/equipmentInventory`
+window.IDENTITY_SERVICE_URL = 'https://localhost:5003'
+window.USERS_API_URL = `${window.IDENTITY_SERVICE_URL}/users`
 window.RABBITMQ_URL = 'http://localhost:15672'

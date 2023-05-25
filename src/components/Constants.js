@@ -1,4 +1,5 @@
 export const ApplicationPaths = {
   EquipmentPath: '/equipment',
-  EquipmentInventoryPath: '/equipmentinventory'
+  EquipmentInventoryPath: '/equipmentinventory',
+  UsersPath: '/users'
 };

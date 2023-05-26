@@ -1,0 +1,35 @@
+# Default values for frontend.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: harvesthelper.azurecr.io/harvesthelper.frontend
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: ""
+
+configValues:
+  EQUIPMENT_ITEMS_API_URL: ${window.location.origin}/equipment-svc/equipment
+  EQUIPMENTINVENTORY_ITEMS_API_URL: ${window.location.origin}/equipmentinventory-svc/equipmentinventory
+  IDENTITY_SERVICE_URL: ${window.location.origin}/identity-svc
+  USERS_API_URL: ${window.location.origin}/identity-svc/users
+
+podAnnotations: {}
+
+service:
+  type: ClusterIP
+  port: 80
+
+resources:
+  limits:
+    memory: "128Mi"
+    cpu: "150m"
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80

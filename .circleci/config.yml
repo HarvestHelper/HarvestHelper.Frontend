@@ -1,0 +1,11 @@
+version: 2.1
+
+orbs:
+  cypress: cypress-io/cypress@3
+
+workflows:
+  test:
+    jobs:
+      - cypress/run:
+          package-manager: 'npm'
+          start-command: 'npm start'

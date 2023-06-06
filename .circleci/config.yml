@@ -6,4 +6,7 @@ workflows:
     jobs:
       - cypress/run:
           start-command: npm run start
+      - store_test_results:
+        path: test-results
+
           

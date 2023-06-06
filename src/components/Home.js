@@ -38,7 +38,7 @@ export class Home extends Component {
     return (
       <div>
         <h1>HarvestHelper</h1>
-        <p>Welcome to the HarvestHelper website.</p>
+        <p data-testid="welcome-text">Welcome to the HarvestHelper website.</p>
         <p>To get started, you can:</p>
         <ul>
           <li>Check your <Link to={ApplicationPaths.EquipmentInventoryPath}>EquipmentInventory</Link></li>
